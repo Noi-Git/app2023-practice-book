@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BookShow = () => {
+const BookShow = ({ book }) => {
   return <div>BookShow</div>
 }
 
