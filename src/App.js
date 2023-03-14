@@ -25,10 +25,10 @@ function App() {
     setBooks(updatedBooks)
   }
 
-  const editBookById = (id, title) => {
+  const editBookById = (id, newTitle) => {
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
-        return { ...book, title }
+        return { ...book, newTitle }
       }
       return book
     })
