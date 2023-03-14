@@ -8,7 +8,7 @@ const BookShow = ({ book, onDelete, onEdit }) => {
   }
 
   const handleEditClick = (id, title) => {
-    // console.log('you click me')
+    console.log('you click me')
     setShowEdit(!showEdit)
     onEdit(id, title)
   }
@@ -16,7 +16,7 @@ const BookShow = ({ book, onDelete, onEdit }) => {
   let content = <h3>{book.title}</h3>
   if (showEdit) {
     // if the show edit = true, show the <BookEdit/>
-    content = <BookEdit book={book} /> // pass book props to BookEdit to display the title in the Edit input field
+    content = <BookEdit book={book} onEdit={onEdit} /> // pass book props to BookEdit to display the title in the Edit input field
   }
 
   return (
