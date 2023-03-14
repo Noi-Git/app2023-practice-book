@@ -3,20 +3,27 @@ import BookEdit from './BookEdit'
 
 const BookShow = ({ book, onDelete, onEdit }) => {
   const [showEdit, setShowEdit] = useState(false)
+
   const handleDeleteClick = (id) => {
     onDelete(book.id)
   }
 
-  const handleEditClick = (id, title) => {
+  const handleEditClick = () => {
     console.log('you click me')
     setShowEdit(!showEdit)
-    onEdit(id, title)
+  }
+
+  const handleSubmit = (id, newTitle) => {
+    // receive these props from BookEdit
+    setShowEdit(false)
+    onEdit(id, newTitle) // pass it to App.js
   }
 
   let content = <h3>{book.title}</h3>
   if (showEdit) {
     // if the show edit = true, show the <BookEdit/>
-    content = <BookEdit book={book} onEdit={onEdit} /> // pass book props to BookEdit to display the title in the Edit input field
+    content = <BookEdit book={book} onSubmit={handleSubmit} />
+    // pass book props to BookEdit to display the title in the Edit input field
   }
 
   return (
