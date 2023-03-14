@@ -11,12 +11,6 @@ function App() {
     setBooks(updatedBook)
   }
 
-  const [fruit, setFruit] = useState({ color: 'red', name: 'apple' })
-  const removeColor = () => {
-    const { color, ...rest } = fruit
-    setFruit(rest)
-  }
-
   return (
     <div className='App'>
       <BookCreate onCreate={createBook} />
