@@ -47,7 +47,19 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  return <BooksContext.Provider value={{}}>{children}</BooksContext.Provider>
+  const valueToShare = {
+    books,
+    fetchBooks,
+    createBook,
+    editBookById,
+    deleteBookById,
+  }
+
+  return (
+    <BooksContext.Provider value={{ valueToShare }}>
+      {children}
+    </BooksContext.Provider>
+  )
 }
 
 export { Provider }
