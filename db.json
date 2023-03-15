@@ -1,12 +1,8 @@
 {
   "books": [
     {
-      "title": "A good bridge!",
+      "title": "Another beautiful bridge",
       "id": 1
-    },
-    {
-      "title": "This is the second test",
-      "id": 2
     }
   ]
 }
