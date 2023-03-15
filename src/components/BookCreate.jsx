@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react'
-import BooksContext from '../context/books'
+import React, { useState } from 'react'
+import useBooksContext from '../hooks/use-books-context'
 
 // Show add book form
 const BookCreate = () => {
   const [title, setTitle] = useState('')
-  const { createBook } = useContext(BooksContext)
+  const { createBook } = useBooksContext()
 
   const handleChange = (event) => {
     setTitle(event.target.value)
