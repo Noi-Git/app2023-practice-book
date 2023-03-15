@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/app2023-practice-book/static/css/main.1f59ae86.css",
+    "main.js": "/app2023-practice-book/static/js/main.29197a71.js",
+    "index.html": "/app2023-practice-book/index.html",
+    "main.1f59ae86.css.map": "/app2023-practice-book/static/css/main.1f59ae86.css.map",
+    "main.29197a71.js.map": "/app2023-practice-book/static/js/main.29197a71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f59ae86.css",
+    "static/js/main.29197a71.js"
+  ]
+}
