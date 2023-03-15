@@ -1,7 +1,4 @@
 import { useEffect, useContext } from 'react'
-import BooksContext from './context/books'
-import './App.css'
-
 import BookCreate from './components/BookCreate'
 import BookList from './components/BookList'
 import BooksContext from './context/books'

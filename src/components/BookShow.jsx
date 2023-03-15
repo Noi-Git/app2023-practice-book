@@ -6,7 +6,7 @@ const BookShow = ({ book }) => {
   const [showEdit, setShowEdit] = useState(false)
   const { deleteBookById, editBookById } = useContext(BooksContext)
 
-  const handleDeleteClick = (id) => {
+  const handleDeleteClick = () => {
     deleteBookById(book.id)
   }
 
@@ -14,17 +14,14 @@ const BookShow = ({ book }) => {
     setShowEdit(!showEdit)
   }
 
-  const handleSubmit = (id, newTitle) => {
-    // receive these props from BookEdit
+  const handleSubmit = () => {
     setShowEdit(false)
-    editBookById(id, newTitle) // pass it to App.js
   }
 
   let content = <h3>{book.title}</h3>
   if (showEdit) {
     // if the show edit = true, show the <BookEdit/>
     content = <BookEdit book={book} onSubmit={handleSubmit} />
-    // pass book props to BookEdit to display the title in the Edit input field
   }
 
   return (
