@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import BooksContext from '../context/books'
 import BookEdit from './BookEdit'
 
-const BookShow = ({ book, onDelete, onEdit }) => {
+const BookShow = ({ book }) => {
   const [showEdit, setShowEdit] = useState(false)
+  const { deleteBookById, editBookById } = useContext(BooksContext)
 
   const handleDeleteClick = (id) => {
-    onDelete(book.id)
+    deleteBookById(book.id)
   }
 
   const handleEditClick = () => {
-    console.log('you click me')
     setShowEdit(!showEdit)
   }
 
   const handleSubmit = (id, newTitle) => {
     // receive these props from BookEdit
     setShowEdit(false)
-    onEdit(id, newTitle) // pass it to App.js
+    editBookById(id, newTitle) // pass it to App.js
   }
 
   let content = <h3>{book.title}</h3>
